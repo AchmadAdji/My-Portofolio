@@ -43,6 +43,20 @@
     .about-containers {
       margin-top: 0;
     }
+
+    #contact {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 0rem;
+      }
+
+      .Myskill {
+        padding-top: 20px;
+        font-size: 30px;
+        text-align: center;
+      }
+      
   }
   
   @media screen and (max-width: 600px) {
@@ -50,6 +64,13 @@
     #contact {
         height: 50vh;
     }
+
+    #contact {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 10px;
+      }
    
     #profile {
       height: 83vh;
@@ -82,4 +103,11 @@
     .text-container {
       text-align: justify;
     }
+
+    .Myskill {
+        padding-top: 10px;
+        font-size: 30px;
+        text-align: center;
+      }
+      
   }
