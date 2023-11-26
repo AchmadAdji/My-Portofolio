@@ -1,366 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MyPortfolio</title>
-   
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="responsive.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="responsive.css">
-</head>
-<body>
-
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li>
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">MyPortofolio</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skill">Skills</a></li>
+          <li><a href="project.html">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
-    </div>
-  </nav>
-
-<section id="profile">
-    <div class="section_pic-container">
-        <img src="IMG/foto adji.svg" alt="Foto Achmad Adji">
-    </div>
-    <div class="section_text">
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">MyPortfolio</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#skill" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="project.html" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="IMG/foto adji.svg" alt="foto Achmad Adji Dharma Saputra" />
+      </div>
+      <div class="section__text">
         <p class="section_text_p1">Hello, I'm</p>
-        <h1 class="title_text">Achmad Adji Dharma Saputra</h1>
-        <p class="section_text_p2">A Web Programmer</p>
-        <div id="socials-home-container">
-            <a class="icon" href="https://github.com/AchmadAdji"><i class="fa-brands fa-square-gitlab fa-2xl"></i></a>
-            <a class="icon" href="https://github.com/AchmadAdji"><i class="fa-brands fa-square-github fa-2xl"></i></a>
+        <h1 class="title">Achmad Adji Dharma Saputra</h1>
+        <p class="section_text_p2">Web Programmer</p>
+        <div id="socials-container">
+          <a class="icon" href="https://github.com/AchmadAdji"><i class="fa-brands fa-square-gitlab fa-2xl"></i></a>
+          <a class="icon" href="https://github.com/AchmadAdji"><i class="fa-brands fa-square-github fa-2xl"></i></a>
+      </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section_text_p1">Mengenal Lebih Tentang Saya</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="IMG/foto adji.svg"
+            alt="Foto Profile"
+            class="about-pic"
+          />
         </div>
-    </div>
-</section>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <i class="fa-solid fa-award"></i>
+              <h3>Experience</h3>
+              <p>1+ years <br />Learn HTML, CSS, JS</p>
+            </div>
+            <div class="details-container">
+              <i class="fa-solid fa-user-group"></i>
+              <h3>Education</h3>
+              <p>Ahmad Jumadi, S.Kom
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              Saya Achmad Adji Dharma Saputra, Umur Saya 16 tahum. Saya Lahir Di Karawang
+              Pada Tanggal 04 April 2007. Saya Adalah Seorang Siswa SMKN 1 KARAWANG, Jurusan
+              RPL (Rekayasa Perangkat Lunak). 
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    <div class="Myskill" id="skill">My Skills</div>
+    <section id="skill">
+      <div class="skill-bar-container">
+        <p class="skill-name">HTML - 70%</p>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-progress" style="width: 70%;"></div>
+      </div>
+  
+      <div class="skill-bar-container">
+        <p class="skill-name">CSS - 60%</p>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-progress" style="width: 60%;"></div>
+      </div>
+  
+      <div class="skill-bar-container">
+        <p class="skill-name">JavaScript - 50%</p>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-progress" style="width: 50%;"></div>
+      </div>
+  
+      <div class="skill-bar-container">
+        <p class="skill-name">Bootstrap - 45%</p>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-progress" style="width: 45%;"></div>
+      </div>
+    </section>
+    <br>
 
-<section id="about">
-  <p class="section_text_p1">Get To Know More</p>
-  <h1 class="title">About Me</h1>
-  <div class="section-container">
-    <div class="section__pic-container">
-      <img
-        src="./assets/about-pic.png"
-        alt="Profile picture"
-        class="about-pic"
-      />
-    </div>
-    <div class="about-details-container">
-      <div class="about-containers">
-        <div class="details-container">
-          <img
-            src="./assets/experience.png"
-            alt="Experience icon"
-            class="icon"
-          />
-          <h3>Experience</h3>
-          <p>2+ years <br />Frontend Development</p>
-        </div>
-        <div class="details-container">
-          <img
-            src="./assets/education.png"
-            alt="Education icon"
-            class="icon"
-          />
-          <h3>Education</h3>
-          <p>B.Sc. Bachelors Degree<br />M.Sc. Masters Degree</p>
-        </div>
-      </div>
-      <div class="text-container">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-          reprehenderit et laborum, rem, dolore eum quod voluptate
-          exercitationem nobis, nihil esse debitis maxime facere minus sint
-          delectus velit in eos quo officiis explicabo deleniti dignissimos.
-          Eligendi illum libero dolorum cum laboriosam corrupti quidem,
-          reiciendis ea magnam? Nulla, impedit fuga!
-        </p>
-      </div>
-    </div>
-  </div>
-  <img
-    src="./assets/arrow.png"
-    alt="Arrow icon"
-    class="icon arrow"
-    onclick="location.href='./#experience'"
-  />
-</section>
-<section id="experience">
-  <p class="section_text_p1">Explore My</p>
-  <h1 class="title">Experience</h1>
-  <div class="experience-details-container">
-    <div class="about-containers">
-      <div class="details-container">
-        <h2 class="experience-sub-title">Frontend Development</h2>
-        <div class="article-container">
-          <article>
-            <img
-              src="./assets/checkmark.png"
-              alt="Experience icon"
-              class="icon"
-            />
-            <div>
-              <h3>HTML</h3>
-              <p>Experienced</p>
-            </div>
-          </article>
-          <article>
-            <img
-              src="./assets/checkmark.png"
-              alt="Experience icon"
-              class="icon"
-            />
-            <div>
-              <h3>CSS</h3>
-              <p>Experienced</p>
-            </div>
-          </article>
-          <article>
-            <img
-              src="./assets/checkmark.png"
-              alt="Experience icon"
-              class="icon"
-            />
-            <div>
-              <h3>SASS</h3>
-              <p>Intermediate</p>
-            </div>
-          </article>
-          <article>
-            <img
-              src="./assets/checkmark.png"
-              alt="Experience icon"
-              class="icon"
-            />
-            <div>
-              <h3>JavaScript</h3>
-              <p>Basic</p>
-            </div>
-          </article>
-          <article>
-            <img
-              src="./assets/checkmark.png"
-              alt="Experience icon"
-              class="icon"
-            />
-            <div>
-              <h3>TypeScript</h3>
-              <p>Basic</p>
-            </div>
-          </article>
-          <article>
-            <img
-              src="./assets/checkmark.png"
-              alt="Experience icon"
-              class="icon"
-            />
-            <div>
-              <h3>Material UI</h3>
-              <p>Intermediate</p>
-            </div>
-          </article>
-        </div>
-      </div>
-      <div class="details-container">
-        <h2 class="experience-sub-title">Frontend Development</h2>
-        <div class="article-container">
-          <article>
-            <img
-              src="./assets/checkmark.png"
-              alt="Experience icon"
-              class="icon"
-            />
-            <div>
-              <h3>PostgreSQL</h3>
-              <p>Basic</p>
-            </div>
-          </article>
-          <article>
-            <img
-              src="./assets/checkmark.png"
-              alt="Experience icon"
-              class="icon"
-            />
-            <div>
-              <h3>Node JS</h3>
-              <p>Intermediate</p>
-            </div>
-          </article>
-          <article>
-            <img
-              src="./assets/checkmark.png"
-              alt="Experience icon"
-              class="icon"
-            />
-            <div>
-              <h3>Express JS</h3>
-              <p>Intermediate</p>
-            </div>
-          </article>
-          <article>
-            <img
-              src="./assets/checkmark.png"
-              alt="Experience icon"
-              class="icon"
-            />
-            <div>
-              <h3>Git</h3>
-              <p>Intermediate</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </div>
-  </div>
-  <img
-    src="./assets/arrow.png"
-    alt="Arrow icon"
-    class="icon arrow"
-    onclick="location.href='./#projects'"
-  />
-</section>
-<section id="projects">
-  <p class="section_text_p1">Browse My Recent</p>
-  <h1 class="title">Projects</h1>
-  <div class="experience-details-container">
-    <div class="about-containers">
-      <div class="details-container color-container">
-        <div class="article-container">
-          <img
-            src="./assets/project-1.png"
-            alt="Project 1"
-            class="project-img"
-          />
-        </div>
-        <h2 class="experience-sub-title project-title">Project One</h2>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2 project-btn"
-            onclick="location.href='https://github.com/'"
-          >
-            Github
-          </button>
-          <button
-            class="btn btn-color-2 project-btn"
-            onclick="location.href='https://github.com/'"
-          >
-            Live Demo
-          </button>
-        </div>
-      </div>
-      <div class="details-container color-container">
-        <div class="article-container">
-          <img
-            src="./assets/project-2.png"
-            alt="Project 2"
-            class="project-img"
-          />
-        </div>
-        <h2 class="experience-sub-title project-title">Project Two</h2>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2 project-btn"
-            onclick="location.href='https://github.com/'"
-          >
-            Github
-          </button>
-          <button
-            class="btn btn-color-2 project-btn"
-            onclick="location.href='https://github.com/'"
-          >
-            Live Demo
-          </button>
-        </div>
-      </div>
-      <div class="details-container color-container">
-        <div class="article-container">
-          <img
-            src="./assets/project-3.png"
-            alt="Project 3"
-            class="project-img"
-          />
-        </div>
-        <h2 class="experience-sub-title project-title">Project Three</h2>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2 project-btn"
-            onclick="location.href='https://github.com/'"
-          >
-            Github
-          </button>
-          <button
-            class="btn btn-color-2 project-btn"
-            onclick="location.href='https://github.com/'"
-          >
-            Live Demo
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <img
-    src="./assets/arrow.png"
-    alt="Arrow icon"
-    class="icon arrow"
-    onclick="location.href='./#contact'"
-  />
-</section>
-<section id="contact">
-  <p class="section_text_p1">Get in Touch</p>
-  <h1 class="title">Contact Me</h1>
-  <div class="contact-info-upper-container">
-    <div class="contact-info-container">
-      <img
-        src="./assets/email.png"
-        alt="Email icon"
-        class="icon contact-icon email-icon"
-      />
-      <p><a href="mailto:examplemail@gmail.com">Example@gmail.com</a></p>
-    </div>
-    <div class="contact-info-container">
-      <img
-        src="./assets/linkedin.png"
-        alt="LinkedIn icon"
-        class="icon contact-icon"
-      />
-      <p><a href="https://www.linkedin.com">LinkedIn</a></p>
-    </div>
-  </div>
-</section>
-<footer>
-  <nav>
-    <div class="nav-links-container">
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-
-<footer class="bg-dark text-white text-center py-3">
-    <p>&copy; 2023 My Portfolio</p>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-</body>
-</html>
+    <footer>
+      <p>&copy; 2023 Your Website Name. All rights reserved. | Contact: your@email.com</p>
+    </footer>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="JS/script.js"></script>
+  </body>
+</html
