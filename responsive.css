@@ -27,9 +27,7 @@
     .section-container {
       display: block;
     }
-    .arrow {
-      display: none;
-    }
+   
     section,
     .section-container {
       height: fit-content;
@@ -48,6 +46,10 @@
   }
   
   @media screen and (max-width: 600px) {
+
+    #contact {
+        height: 50vh;
+    }
    
     #profile {
       height: 83vh;

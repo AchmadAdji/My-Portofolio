@@ -1,37 +1,50 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const listBarang = document.getElementById("listBarang");
-    const formItem = document.getElementById("formItem");
-    const keywordInput = document.getElementById("keyword");
-    let totalBarangDiKeranjang = 0;
 
-var items = [
-    ['001', 'Keyboard Logitek', 60000, 'Keyboard yang mantap', 'logitek.jpg'], 
-    ['002', 'Keyboard MSI', 300000, 'Keyboard gaming MSI mekanik', 'msi.jpg'],
-    ['003', 'Mouse Genius', 50000, 'Mouse Genius biar lebih pinter', 'genius.jpeg'],
-    ['004', 'Mouse Jerry', 30000, 'Mouse yang disukai kucing', 'jerry.jpg']
-    ]
-    function Cari(keyword) {
-        listBarang.innerHTML = "";
-        for (let i = 0; i < items.length; i++) {
-            const item = items[i];
-            if (item[1].toLowerCase().includes(keyword.toLowerCase())) {
-                const card = document.createElement("div");
-                card.classList.add("col-4", "mt-1" );
-                card.innerHTML = `
-                    <div class ="col-4 mt-5"> 
-                        <div class="card" style="width: 18rem;">
-                            <img src="assets/${item[4]}" class="card-img-top" height="220px" width="200px" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title" id="itemName">${item[1]}</h5>
-                                <p class="card-text" id="itemDesc">${item[3]}</p>
-                                <p class="card-text">Rp ${item[2]}</p>
-                                <a href="#" class="btn btn-primary add-to-cart" data-id="${item[0]}">Add to Cart</a>
-                            </div>
-                        </div>
-                    </div>
-                `;
-                listBarang.appendChild(card);
-            }
+    document.addEventListener("DOMContentLoaded", function () {
+        const cardContainer = document.getElementById("cardContainer");
+        const formItem = document.getElementById("formitem");
+        const keywordInput = document.getElementById("keyword");
+
+        var items = [
+            { id: '001', name: 'Tugas Tabel', description: 'membuat sebuah tabel kehadiran siswa', image: 'foto1.jpeg', href: 'https://achmadadji.github.io/Tugas-Tabel/' },
+            { id: '002', name: 'Tugas Form', description: 'membuat sebuah form login', image: 'foto4.jpeg', href:'https://achmadadji.github.io/tugas-pwb-form/'},
+            { id: '003', name: 'Tugas CSS', description: 'menambahkan CSS pada HTML', image: 'foto2.jpeg', href:'https://achmadadji.github.io/tugas-pwb-css/'},
+            { id: '004', name: 'Tugas Bootstrap dan DOM', description: 'menambahkan DOM untuk pencarian dan Bootstrap untuk card', image: 'foto3.jpeg', href: 'https://achmadadji.github.io/tugas-boostrap/' }
+        ];
+
+        function renderCard(item) {
+            const card = document.createElement("div");
+            card.classList.add("col-md-4", "mt-3");
+            card.innerHTML = `
+              <div class="card">
+                <img src="IMG/${item.image}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">${item.name}</h5>
+                  <p class="card-text">${item.description}</p>
+                  <a href="${item.href}" class="btn btn-primary">Lihat Detail</a>
+                </div>
+              </div>
+            `;
+            cardContainer.appendChild(card);
         }
-    }
-});
+        
+
+        function renderCards(items) {
+            cardContainer.innerHTML = "";
+            items.forEach(item => {
+                renderCard(item);
+            });
+        }
+
+        function searchItems(keyword) {
+            const filteredItems = items.filter(item => item.name.toLowerCase().includes(keyword.toLowerCase()));
+            renderCards(filteredItems);
+        }
+
+        formItem.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const keyword = keywordInput.value;
+            searchItems(keyword);
+        });
+
+        renderCards(items);
+    });
