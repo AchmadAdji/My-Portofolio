@@ -297,7 +297,7 @@ section {
 
 .skill-name {
   font-weight: 600;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .skill-bar {
@@ -330,7 +330,7 @@ section {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-bottom: 20rem;
+  margin-bottom: 12rem;
 }
 
 .contact-info-upper-container {
